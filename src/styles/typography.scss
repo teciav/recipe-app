@@ -1,0 +1,60 @@
+@mixin font-body {
+	font-family: 'Thasadith', sans-serif;
+	font-weight: 300;
+}
+
+@mixin font-body--light {
+	font-family: 'Thasadith', sans-serif;
+	font-weight: 400;
+}
+
+@mixin font-body--bold {
+	font-family: 'Thasadith', sans-serif;
+	font-weight: 700;
+}
+
+@mixin font-title {
+    font-family: 'Yatra One', cursive;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+	@include font-body--bold;
+}
+
+h1 {
+    font-size: 40px;
+
+	@include for-tablet-landscape-up {
+		font-size: 50px;
+	}
+}
+
+h2 {
+    font-size: 30px;
+
+	@include for-tablet-landscape-up {
+		font-size: 40px;
+	}
+}
+
+h3 {
+    font-size: 20px;
+
+	@include for-tablet-landscape-up {
+		font-size: 25px;
+	}
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.title {
+	@include font-title;
+	margin-bottom: $global_space--md;
+
+	@include for-big-desktop-up {
+		margin-bottom: $global_space--xlg;
+	}
+}

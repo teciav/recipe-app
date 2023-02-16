@@ -1,0 +1,86 @@
+// style reset
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+	line-height: 1;
+	font-size: 18px;
+	@include font-body;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $color_primary;
+	transition: all 0.3s ease;
+	@include font-body--bold;
+
+	&:hover {
+		color: $color_secondary;
+		transition: all 0.3s ease;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.content {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 $global_space--md;
+
+	@include for-tablet-landscape-up {
+		padding: 0 $global_space--xlg;
+	}
+
+	@include for-desktop-up {
+		padding: 0 $global_space--xlg * 2;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: $global_space--md;
+
+	@include for-tablet-portrait-up {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include for-desktop-up {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: $global_space--xlg;
+	}
+}
+
+.button {
+    background: $color_white;
+    border: 1px solid $color_primary;
+    padding: $global_space $global_space--md;
+    border-radius: 50px;
+	cursor: pointer;
+	color: $color_primary;
+	transition: all 0.3s ease;
+	@include font-body--bold;
+
+	&:hover {
+		color: $color_secondary;
+		transition: all 0.3s ease;
+	}
+}

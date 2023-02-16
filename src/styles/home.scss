@@ -1,0 +1,25 @@
+.home-container {
+    padding: $global_space--xlg 0;
+    background: $color_grey-light;
+}
+
+.home__section-grid {
+    margin-top: $global_space--md;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $global_space--sm;
+
+    @include for-tablet-portrait-up {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $global_space--sm;
+	}
+
+	@include for-desktop-up {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: $global_space--sm;
+	}
+}
+
+.home__categories-section {
+    margin: $global_space--xlg * 2 0;
+}

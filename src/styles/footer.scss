@@ -1,0 +1,9 @@
+footer {
+    background: $color_primary;
+    padding: $global_space--xlg $global_space--xlg * 2;
+
+    a {
+        color: $color_white;
+        width: fit-content;
+    }
+}

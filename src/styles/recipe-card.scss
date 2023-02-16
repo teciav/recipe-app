@@ -1,0 +1,31 @@
+.recipe-card__container {
+    border-radius: $global_space;
+    display: flex;
+    justify-content: center;
+    background-color: $color_white;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.recipe-card__image {
+    border-radius: $global_space $global_space 0 0 ;
+}
+
+.recipe__category,
+.recipe-card__title {
+    margin: $global_space--sm;
+}
+
+.recipe__category {
+    color: white;
+    padding: $global_space $global_space--sm;
+    background-color: $color_primary;
+    width: fit-content;
+    border-radius: 50px;
+    margin-top: $global_space--sm;
+    font-size: 14px;
+    @include font-body--bold 
+}

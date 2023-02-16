@@ -1,0 +1,19 @@
+.category__card {
+    border: 1px solid $color_grey;
+    border-radius: $global-space;
+    display: flex;
+    align-items: center;
+    padding: $global-space--sm;
+    background: $color_white;
+    transition: all 0.3s ease;
+
+    img { 
+        width: 30%;
+        margin-right: $global-space--sm;
+    }
+
+    &:hover {
+        background: $color_grey;
+        transition: all 0.3s ease;
+    }
+}
